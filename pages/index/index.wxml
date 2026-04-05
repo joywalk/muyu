@@ -1,0 +1,39 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+  <!-- 标题 -->
+  <view class="header zen-text">
+    <text class="title">电子木鱼</text>
+    <text class="subtitle">点击积德，功德+1</text>
+  </view>
+
+  <!-- 计数显示 -->
+  <view class="count-container">
+    <text class="count-number">{{count}}</text>
+    <text class="count-label">功德</text>
+  </view>
+
+  <!-- 木鱼 -->
+  <view class="fish-container" bindtap="tapFish">
+    <view class="fish-box" animation="{{animation}}">
+      <image class="fish-image" src="/images/fish.png" mode="aspectFit"></image>
+    </view>
+
+    <!-- +1 浮动动画 -->
+    <view class="plus-animations">
+      <view
+        wx:for="{{plusAnimations}}"
+        wx:key="id"
+        class="plus-animation"
+        animation="{{item.animation}}"
+        style="transform: translateX({{item.offsetX}}px);">
+        <text class="plus-text">{{item.text}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 设置按钮 -->
+  <view class="settings-btn" bindtap="goToSettings">
+    <text class="settings-icon">⚙️</text>
+    <text class="settings-text">设置</text>
+  </view>
+</view>

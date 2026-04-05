@@ -1,0 +1,57 @@
+<!--pages/settings/settings.wxml-->
+<view class="container">
+  <view class="header">
+    <text class="title">设置</text>
+    <view class="back-btn" bindtap="goBack">
+      <text class="back-icon">←</text>
+    </view>
+  </view>
+
+  <view class="settings-list">
+    <!-- 音效设置 -->
+    <view class="setting-item">
+      <text class="setting-label">音效</text>
+      <switch checked="{{settings.soundEnabled}}" bindchange="toggleSound" />
+    </view>
+
+    <!-- 震动设置 -->
+    <view class="setting-item">
+      <text class="setting-label">震动</text>
+      <switch checked="{{settings.vibrationEnabled}}" bindchange="toggleVibration" />
+    </view>
+
+    <!-- 动画设置 -->
+    <view class="setting-item">
+      <text class="setting-label">动画效果</text>
+      <switch checked="{{settings.showAnimation}}" bindchange="toggleAnimation" />
+    </view>
+
+    <!-- 增量设置 -->
+    <view class="setting-item">
+      <text class="setting-label">每次点击功德数</text>
+      <picker
+        value="{{settings.increment - 1}}"
+        range="{{incrementOptions}}"
+        range-key="label"
+        bindchange="changeIncrement"
+      >
+        <view class="picker-value">
+          {{incrementOptions[settings.increment - 1].label}}
+        </view>
+      </picker>
+    </view>
+  </view>
+
+  <!-- 危险操作区域 -->
+  <view class="danger-zone">
+    <view class="danger-item" bindtap="resetCount">
+      <text class="danger-label">清零功德</text>
+      <text class="danger-icon">🗑️</text>
+    </view>
+  </view>
+
+  <!-- 提示信息 -->
+  <view class="tips">
+    <text class="tips-text">温馨提示：清零功德前请谨慎考虑</text>
+  </view>
+</view>

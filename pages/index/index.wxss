@@ -1,0 +1,121 @@
+/* pages/index/index.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40rpx;
+  position: relative;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60rpx;
+}
+
+.title {
+  font-size: 48rpx;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10rpx;
+}
+
+.subtitle {
+  font-size: 28rpx;
+  color: #666;
+  display: block;
+}
+
+.count-container {
+  text-align: center;
+  margin-bottom: 80rpx;
+}
+
+.count-number {
+  font-size: 72rpx;
+  font-weight: bold;
+  color: #2c3e50;
+  display: block;
+  margin-bottom: 10rpx;
+}
+
+.count-label {
+  font-size: 32rpx;
+  color: #7f8c8d;
+  display: block;
+}
+
+.fish-container {
+  position: relative;
+  width: 200rpx;
+  height: 200rpx;
+  margin-bottom: 100rpx;
+}
+
+.fish-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 10rpx 30rpx rgba(102, 126, 234, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.fish-box:active {
+  transform: scale(0.95);
+}
+
+.fish-image {
+  width: 160rpx;
+  height: 160rpx;
+}
+
+/* +1 动画容器 */
+.plus-animations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.plus-animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.plus-text {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #f39c12;
+  text-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.1);
+}
+
+.settings-btn {
+  position: fixed;
+  bottom: 40rpx;
+  right: 40rpx;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50rpx;
+  padding: 20rpx 40rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 10rpx;
+}
+
+.settings-icon {
+  font-size: 32rpx;
+}
+
+.settings-text {
+  font-size: 28rpx;
+  color: #333;
+}

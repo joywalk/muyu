@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- 极简木鱼 - 圆形背景 -->
+  <circle cx="100" cy="100" r="90" fill="white"/>
+
+  <!-- 木鱼主体 - 抽象化 -->
+  <g transform="translate(100, 100)">
+    <!-- 底部半圆 -->
+    <path d="M-55,30 Q-55,60 0,70 Q55,60 55,30"
+          fill="#f0f0f0" stroke="#d0d0d0" stroke-width="2"/>
+
+    <!-- 顶部弧形 -->
+    <path d="M-55,30 Q-55,-5 0,-15 Q55,-5 55,30"
+          fill="#f8f8f8" stroke="#d0d0d0" stroke-width="2"/>
+
+    <!-- 中间开口 -->
+    <path d="M-45,30 Q0,55 45,30"
+          fill="none" stroke="#ccc" stroke-width="4"/>
+
+    <!-- 简化纹理 -->
+    <line x1="-40" y1="10" x2="-40" y2="50" stroke="#ddd" stroke-width="2"/>
+    <line x1="40" y1="10" x2="40" y2="50" stroke="#ddd" stroke-width="2"/>
+
+    <!-- 木棒 - 简化版 -->
+    <line x1="0" y1="-45" x2="0" y2="-15"
+          stroke="#B8860B" stroke-width="12" stroke-linecap="round"/>
+    <line x1="0" y1="-15" x2="0" y2="25"
+          stroke="#CD853F" stroke-width="14" stroke-linecap="round"/>
+
+    <!-- 高光 -->
+    <circle cx="15" cy="-5" r="6" fill="rgba(255,255,255,0.8)"/>
+  </g>
+</svg>
