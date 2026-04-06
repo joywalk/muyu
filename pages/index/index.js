@@ -224,6 +224,14 @@ Page({
         settings: savedSettings
       });
     }
+
+    // 页面显示时重新加载计数（解决清零功德后不生效的问题）
+    const savedCount = wx.getStorageSync('count');
+    if (savedCount !== '' && savedCount !== null && savedCount !== undefined) {
+      this.setData({
+        count: Number(savedCount)
+      });
+    }
   },
 
   onUnload() {
