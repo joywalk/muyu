@@ -59,7 +59,7 @@ Page({
 
     for (let i = 0; i < poolSize; i++) {
       const audio = wx.createInnerAudioContext();
-      audio.src = '/audio/fish-sound.mp3';
+      audio.src = '/audio/fish-sound-one.mp3';
       audio.loop = false;
       audio.volume = 1.0;
 
